@@ -1,0 +1,8 @@
+streamlit==1.28.0
+streamlit-drawable-canvas==0.9.3
+opencv-python-headless
+pillow
+numpy
+pandas
+matplotlib
+ultralytics
