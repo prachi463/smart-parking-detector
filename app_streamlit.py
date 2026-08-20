@@ -194,7 +194,7 @@ with tab_detect:
 
         st.subheader("Step 1 — Mark Parking Spaces")
         st.caption("Click and drag to draw a box over each parking spot. Draw as many as you like.")
-
+        st.write(f"DEBUG: display_image size = {display_image.size}")
         canvas_result = st_canvas(
             fill_color="rgba(255, 0, 255, 0.25)",
             stroke_width=2,
