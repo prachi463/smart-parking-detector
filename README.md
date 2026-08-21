@@ -1,21 +1,26 @@
-\# 🚗 Smart Parking Detector !\[Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg) !\[OpenCV](https://img.shields.io/badge/OpenCV-4.5%2B-green.svg) !\[YOLOv8](https://img.shields.io/badge/YOLOv8-Latest-orange.svg) !\[Streamlit](https://img.shields.io/badge/Streamlit-Web%20App-red.svg) !\[License](https://img.shields.io/badge/License-MIT-yellow.svg)
+\# 🚗 Smart Parking Detector 
+!\[Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg) 
+!\[OpenCV](https://img.shields.io/badge/OpenCV-4.5%2B-green.svg) 
+!\[YOLOv8](https://img.shields.io/badge/YOLOv8-Latest-orange.svg) 
+!\[Streamlit](https://img.shields.io/badge/Streamlit-Web%20App-red.svg) 
+!\[License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 
 
 \*\*An intelligent parking space occupancy detection system, combining classical computer vision and YOLOv8 deep learning — available both as a desktop application and a browser-based web app.\*\*
 
 
-
-\[Live Demo](https://smart-parking-detector.streamlit.app) • \[Live Web App](#-live-demo) • \[Features](#-features) • \[Quick Start](#-quick-start) • \[How It Works](#-how-it-works) • \[Project Architecture](#-project-architecture)
-
-
+\[Live Demo](https://smart-parking-detector.streamlit.app) 
+• \[Live Web App](#-live-demo) 
+• \[Features](#-features) 
+• \[Quick Start](#-quick-start) 
+• \[How It Works](#-how-it-works) 
+• \[Project Architecture](#-project-architecture)
 
 \---
 
 
-
 \## 🎓 About This Project
-
 
 
 This is a final-year B.Tech (CSE – AI/ML) project by \*\*Prachi Verma\*\*, built on top of the open-source
