@@ -1,20 +1,4 @@
-\# 🚗 Smart Parking Detector
-
-
-
-<div align="center">
-
-
-
-\[!\[Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-
-\[!\[OpenCV](https://img.shields.io/badge/OpenCV-4.5%2B-green.svg)](https://opencv.org/)
-
-\[!\[YOLOv8](https://img.shields.io/badge/YOLOv8-Latest-orange.svg)](https://github.com/ultralytics/ultralytics)
-
-\[!\[Streamlit](https://img.shields.io/badge/Streamlit-Web%20App-red.svg)](https://streamlit.io/)
-
-\[!\[License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+\# 🚗 Smart Parking Detector !\[Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg) !\[OpenCV](https://img.shields.io/badge/OpenCV-4.5%2B-green.svg) !\[YOLOv8](https://img.shields.io/badge/YOLOv8-Latest-orange.svg) !\[Streamlit](https://img.shields.io/badge/Streamlit-Web%20App-red.svg) !\[License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 
 
@@ -22,19 +6,7 @@
 
 
 
-\[Live Web App](#-live-demo) •
-
-\[Features](#-features) •
-
-\[Quick Start](#-quick-start) •
-
-\[How It Works](#-how-it-works) •
-
-\[Project Architecture](#-project-architecture)
-
-
-
-</div>
+\[Live Demo](https://smart-parking-detector.streamlit.app) • \[Live Web App](#-live-demo) • \[Features](#-features) • \[Quick Start](#-quick-start) • \[How It Works](#-how-it-works) • \[Project Architecture](#-project-architecture)
 
 
 
@@ -56,7 +28,7 @@ This is a final-year B.Tech (CSE – AI/ML) project by \*\*Prachi Verma\*\*, bui
 
 \*\*What I added on top of the original project:\*\*
 
-\- 🌐 A full \*\*Streamlit web interface\*\* (`app\_streamlit.py`) — upload an image, draw parking spaces
+\- 🌐 A full \*\*Streamlit web interface\*\* (`app\\\_streamlit.py`) — upload an image, draw parking spaces
 
 &#x20; directly in the browser (no more clunky desktop mouse-drag setup), and get instant results
 
@@ -70,7 +42,7 @@ This is a final-year B.Tech (CSE – AI/ML) project by \*\*Prachi Verma\*\*, bui
 
 \- 🐛 Fixed a bug in `run.py` where `--mode both` silently skipped video processing entirely
 
-&#x20; (`if mode == "video"` → `if mode in \["video", "both"]`)
+&#x20; (`if mode == "video"` → `if mode in \\\["video", "both"]`)
 
 \- ☁️ Deployed the web app publicly via Streamlit Community Cloud
 
@@ -134,7 +106,7 @@ Given a photo (or video) of a parking lot, the system:
 
 
 
-\### Web Application (`app\_streamlit.py`) — \*added in this fork\*
+\### Web Application (`app\\\_streamlit.py`) — \*added in this fork\*
 
 \- 🌐 Runs entirely in the browser — no desktop window, no OpenCV mouse-coordinate quirks
 
@@ -174,9 +146,9 @@ git clone https://github.com/prachi463/smart-parking-detector.git
 
 cd smart-parking-detector
 
-pip install -r requirements\_web.txt
+pip install -r requirements\\\_web.txt
 
-streamlit run app\_streamlit.py
+streamlit run app\\\_streamlit.py
 
 ```
 
