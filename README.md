@@ -28,7 +28,7 @@ This is a final-year B.Tech (CSE – AI/ML) project by \*\*Prachi Verma\*\*, bui
 
 \*\*What I added on top of the original project:\*\*
 
-\- 🌐 A full \*\*Streamlit web interface\*\* (`app\\\_streamlit.py`) — upload an image, draw parking spaces
+\- 🌐 A full \*\*Streamlit web interface\*\* (`app\_streamlit.py`) — upload an image, draw parking spaces
 
 &#x20; directly in the browser (no more clunky desktop mouse-drag setup), and get instant results
 
@@ -42,7 +42,7 @@ This is a final-year B.Tech (CSE – AI/ML) project by \*\*Prachi Verma\*\*, bui
 
 \- 🐛 Fixed a bug in `run.py` where `--mode both` silently skipped video processing entirely
 
-&#x20; (`if mode == "video"` → `if mode in \\\["video", "both"]`)
+&#x20; (`if mode == "video"` → `if mode in \["video", "both"]`)
 
 \- ☁️ Deployed the web app publicly via Streamlit Community Cloud
 
@@ -84,6 +84,18 @@ Given a photo (or video) of a parking lot, the system:
 
 
 
+Input:  Photo of a parking lot with 46 marked spaces
+
+Output: "13 occupied, 6 free — 68.4% occupancy"
+
+&#x20;       + Annotated image showing which exact spots are free
+
+&#x20;       + Pie chart + bar chart dashboard
+
+&#x20;       + CSV export for further analysis
+
+
+
 \---
 
 
@@ -106,7 +118,7 @@ Given a photo (or video) of a parking lot, the system:
 
 
 
-\### Web Application (`app\\\_streamlit.py`) — \*added in this fork\*
+\### Web Application (`app\_streamlit.py`) — \*added in this fork\*
 
 \- 🌐 Runs entirely in the browser — no desktop window, no OpenCV mouse-coordinate quirks
 
@@ -140,17 +152,13 @@ Just open the \[live demo link](#-live-demo) above. No setup required.
 
 
 
-```bash
-
 git clone https://github.com/prachi463/smart-parking-detector.git
 
 cd smart-parking-detector
 
-pip install -r requirements\\\_web.txt
+pip install -r requirements\_web.txt
 
-streamlit run app\\\_streamlit.py
-
-```
+streamlit run app\_streamlit.py
 
 
 
@@ -158,13 +166,9 @@ streamlit run app\\\_streamlit.py
 
 
 
-```bash
-
 pip install -r requirements.txt
 
 python run.py --image carParkImg.jpg
-
-```
 
 
 
@@ -250,27 +254,27 @@ standard angle.
 
 smart-parking-detector/
 
-├── app\_streamlit.py # Web app (this fork's main addition)
+├── app\_streamlit.py               # Web app (this fork's main addition)
 
-├── requirements\_web.txt # Dependencies for the web app
+├── requirements\_web.txt           # Dependencies for the web app
 
-├── enhanced\_parking\_detector.py # Desktop app detection logic
+├── enhanced\_parking\_detector.py   # Desktop app detection logic
 
-├── car\_detector.py # YOLOv8-based vehicle detection
+├── car\_detector.py                # YOLOv8-based vehicle detection
 
-├── run.py # Desktop app CLI entry point
+├── run.py                         # Desktop app CLI entry point
 
-├── main.py # Basic classical-CV-only entry point
+├── main.py                        # Basic classical-CV-only entry point
 
-├── config.py # Centralized configuration
+├── config.py                      # Centralized configuration
 
-├── requirements.txt # Desktop app dependencies
+├── requirements.txt                # Desktop app dependencies
 
-├── carParkImg.jpg / carPark.mp4 # Sample data
+├── carParkImg.jpg / carPark.mp4   # Sample data
 
-├── reports/ # Generated reports (image mode)
+├── reports/                        # Generated reports (image mode)
 
-└── data/ # CSV occupancy logs
+└── data/                           # CSV occupancy logs
 
 
 
