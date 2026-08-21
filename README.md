@@ -1,4 +1,4 @@
-\# 🚗 Smart Parking Space Detector
+\# 🚗 Smart Parking Detector
 
 
 
@@ -18,7 +18,7 @@
 
 
 
-\*\*Smart Parking Space Detector combines classical computer vision and YOLOv8 deep learning to detect parking occupancy — available both as a desktop application and a browser-based web app.\*\*
+\*\*An intelligent parking space occupancy detection system, combining classical computer vision and YOLOv8 deep learning — available both as a desktop application and a browser-based web app.\*\*
 
 
 
@@ -46,15 +46,11 @@
 
 
 
-\*\*Smart Parking Space Detector\*\* is a final-year B.Tech (CSE – AI/ML) project by \*\*Prachi Verma\*\*, built on
+This is a final-year B.Tech (CSE – AI/ML) project by \*\*Prachi Verma\*\*, built on top of the open-source
 
-top of an open-source desktop application originally created by \*\*Bharath K\*\* (Jain Deemed to be University)
+\[Car-Parking-Detection](https://github.com/8harath/Car-Parking-Detection) project originally created by
 
-for the PNT Lab selection process at IIT Tirupati Navishkar. The original project is called
-
-\*\*\[Car-Parking-Detection](https://github.com/8harath/Car-Parking-Detection)\*\* — that name refers to
-
-Bharath's original repository specifically, not this project.
+\*\*Bharath K\*\* (Jain Deemed to be University) for the PNT Lab selection process at IIT Tirupati Navishkar.
 
 
 
@@ -64,10 +60,6 @@ Bharath's original repository specifically, not this project.
 
 &#x20; directly in the browser (no more clunky desktop mouse-drag setup), and get instant results
 
-\- 🚗 A \*\*Vehicle Registration module\*\* — register owner/vehicle/slot details against a parking space,
-
-&#x20; with search, delete, and CSV export, backed by SQLite
-
 \- 🔀 A \*\*hybrid detection pipeline\*\* for the web app: YOLOv8 for direct vehicle detection, combined
 
 &#x20; with a classical pixel-density fallback — since pretrained COCO-based models like YOLOv8n are
@@ -76,9 +68,9 @@ Bharath's original repository specifically, not this project.
 
 &#x20; aerial camera angle
 
-\- 🐛 Fixed a bug in the original desktop app's `run.py` where `--mode both` silently skipped video
+\- 🐛 Fixed a bug in `run.py` where `--mode both` silently skipped video processing entirely
 
-&#x20; processing entirely (`if mode == "video"` → `if mode in \["video", "both"]`)
+&#x20; (`if mode == "video"` → `if mode in \["video", "both"]`)
 
 \- ☁️ Deployed the web app publicly via Streamlit Community Cloud
 
@@ -92,9 +84,7 @@ Bharath's original repository specifically, not this project.
 
 
 
-The Smart Parking Space Detector web app is deployed here:
-
-\*\*\[smart-parking-detector.streamlit.app](https://smart-parking-detector.streamlit.app)\*\*
+The web app is deployed here: \*\*\[smart-parking-detector.streamlit.app](https://smart-parking-detector.streamlit.app)\*\*
 
 
 
@@ -110,7 +100,7 @@ No installation needed — open the link, upload a parking lot photo, draw a box
 
 
 
-Given a photo (or video) of a parking lot, Smart Parking Space Detector:
+Given a photo (or video) of a parking lot, the system:
 
 1\. Lets you mark where the parking spaces are (drag boxes over them — either in a desktop OpenCV window, or directly in your browser)
 
@@ -144,7 +134,7 @@ Given a photo (or video) of a parking lot, Smart Parking Space Detector:
 
 
 
-\### Web Application (`app\_streamlit.py`) — \*this project's main addition\*
+\### Web Application (`app\_streamlit.py`) — \*added in this fork\*
 
 \- 🌐 Runs entirely in the browser — no desktop window, no OpenCV mouse-coordinate quirks
 
@@ -156,9 +146,7 @@ Given a photo (or video) of a parking lot, Smart Parking Space Detector:
 
 \- 📈 Live metrics panel (total/occupied/free/occupancy rate), pie chart, per-space data table
 
-\- 🚗 Vehicle Registration tab — log owner/vehicle/slot details, search, delete, and export as CSV
-
-\- ⬇️ One-click CSV export of detection results
+\- ⬇️ One-click CSV export of results
 
 
 
@@ -186,7 +174,7 @@ git clone https://github.com/prachi463/smart-parking-detector.git
 
 cd smart-parking-detector
 
-pip install -r requirements.txt
+pip install -r requirements\_web.txt
 
 streamlit run app\_streamlit.py
 
@@ -244,7 +232,7 @@ python run.py --image carParkImg.jpg
 
 &#x20;  then measures the proportion of "edge" pixels inside each marked space. This mirrors the technique
 
-&#x20;  the original desktop app uses, and is what makes detection reliable on aerial parking-lot photos
+&#x20;  the original desktop `main.py` uses, and is what makes detection reliable on aerial parking-lot photos
 
 &#x20;  specifically, where YOLO's COCO training data (almost entirely street-level photography) doesn't
 
@@ -290,15 +278,9 @@ standard angle.
 
 smart-parking-detector/
 
-├── app\_streamlit.py # Web app (this project's main addition)
+├── app\_streamlit.py # Web app (this fork's main addition)
 
-├── requirements.txt # Dependencies (used by both web and desktop apps)
-
-├── packages.txt # System-level dependencies for Streamlit Cloud
-
-├── vehicle\_registration\_gui.py # Standalone desktop GUI for vehicle registration
-
-├── view\_vehicles\_gui.py # Standalone desktop GUI for viewing registered vehicles
+├── requirements\_web.txt # Dependencies for the web app
 
 ├── enhanced\_parking\_detector.py # Desktop app detection logic
 
@@ -310,9 +292,9 @@ smart-parking-detector/
 
 ├── config.py # Centralized configuration
 
-├── carParkImg.jpg / carPark.mp4 # Sample data
+├── requirements.txt # Desktop app dependencies
 
-├── parking.db # SQLite database for vehicle registration
+├── carParkImg.jpg / carPark.mp4 # Sample data
 
 ├── reports/ # Generated reports (image mode)
 
@@ -328,21 +310,17 @@ smart-parking-detector/
 
 
 
-Smart Parking Space Detector is built on top of the original desktop application
+This project is built on top of the original \*\*\[Car-Parking-Detection](https://github.com/8harath/Car-Parking-Detection)\*\*
 
-\*\*\[Car-Parking-Detection](https://github.com/8harath/Car-Parking-Detection)\*\* by \*\*Bharath K\*\*
+by \*\*Bharath K\*\* (Jain Deemed to be University), created for the PNT Lab selection process at IIT Tirupati
 
-(Jain Deemed to be University), created for the PNT Lab selection process at IIT Tirupati Navishkar.
+Navishkar. The original desktop application, YOLOv8 integration, and reporting pipeline are his work;
 
-The original desktop application, YOLOv8 integration, and reporting pipeline are his work; this project
-
-adds the Streamlit web interface, vehicle registration module, hybrid detection logic, and public
-
-deployment on top of it.
+this fork adds the Streamlit web interface, hybrid detection logic, and public deployment on top of it.
 
 
 
-\- \*\*Original desktop application\*\*: \[Bharath K](https://github.com/8harath)
+\- \*\*Original project \& desktop app\*\*: \[Bharath K](https://github.com/8harath)
 
 \- \*\*YOLOv8 model\*\*: \[Ultralytics](https://github.com/ultralytics/ultralytics)
 
